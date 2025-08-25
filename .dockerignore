@@ -1,0 +1,17 @@
+cat > .dockerignore << 'EOF'
+.git
+.gitignore
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+venv/
+.venv/
+.env
+logs/
+data/*  # we only COPY zipcode_demographics.csv in Dockerfile
+!data/zipcode_demographics.csv
+EOF
+
